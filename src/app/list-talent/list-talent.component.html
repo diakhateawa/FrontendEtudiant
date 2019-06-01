@@ -1,0 +1,24 @@
+<div class="container">
+  <h2><span>LISTE DES TALENTS</span> <img routerLink="/talent/new" class="icon float-right" src="./assets/images/plus.svg"></h2>
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-1">id</div>
+      <div class="col col-2">Prenom</div>
+      <div class="col col-3">Nom</div>
+      <div class="col col-4">Date de naissance</div>
+      <div class="col col-4" >Actions</div>
+    </li>
+    <li class="table-row" *ngFor="let talent of talents; let i = index">
+      <div class="col col-1">{{i + 1}}</div>
+      <div class="col col-2" >{{talent.prenom}}</div>
+      <div class="col col-3" >{{talent.nom}}</div>
+      <div class="col col-4" >{{talent.dateNaissance|date:local}}</div>
+      <div class="col col-4" >
+        <img class="icon" routerLink="/talent/{{talent._id}}/edit" src="./assets/images/edit.svg">
+        <img class="icon" (click)="delete(talent._id)" src="./assets/images/delete.svg">
+        <img class="icon" routerLink="/talent/{{talent._id}}/show" src="./assets/images/view.svg">
+      </div>
+    </li>
+
+  </ul>
+</div>

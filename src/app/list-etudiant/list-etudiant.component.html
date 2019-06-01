@@ -1,0 +1,28 @@
+<div class="container">
+    <h2><span>LISTE DES ETUDIANTS</span> <img routerLink="/etudiant/new" class="icon float-right" src="./assets/images/plus.svg"></h2>
+    <ul class="responsive-table">
+      <li class="table-header">
+        <div class="col col-1">id</div>
+        <div class="col col-2">Prenom</div>
+        <div class="col col-3">Nom</div>
+        <div class="col col-1">Adresse</div>
+        <div class="col col-2">Telephone</div>
+        <div class="col col-3">Email</div>
+        <div class="col col-4" >Actions</div>
+      </li>
+      <li class="table-row" *ngFor="let etudiant of etudiants; let i = index">
+        <div class="col col-1">{{i + 1}}</div>
+        <div class="col col-2" >{{etudiant.prenom}}</div>
+        <div class="col col-3" >{{etudiant.nom}}</div>
+        <div class="col col-2" >{{etudiant.adresse}}</div>
+        <div class="col col-3" >{{etudiant.telephone}}</div>
+        <div class="col col-3" >{{etudiant.email}}</div>
+        <div class="col col-4" >
+          <img class="icon" routerLink="/etudiant/{{etudiant._id}}/edit" src="./assets/images/edit.svg">
+          <img class="icon" (click)="delete(etudiant._id)" src="./assets/images/delete.svg">
+          <img class="icon" routerLink="/etudiant/{{etudiant._id}}/show" src="./assets/images/view.svg">
+        </div>
+      </li>
+  
+    </ul>
+  </div>

@@ -1,0 +1,27 @@
+<div  align="center">
+    <h2><img routerLink="/" class="retour" src="./assets/images/left-arrow.svg"><span>AFFICHER UN ETUDIANT</span></h2>
+  </div>
+  <div class="well offset-sm-3 col-sm-6" *ngIf="etudiant">
+    <div class="row well white">
+      <div class="col-sm-4">Prénom: </div>
+      <div class="col-sm-8">{{etudiant.prenom}} </div>
+    </div>
+    <div class="row well white">
+      <div class="col-sm-4">Nom: </div>
+      <div class="col-sm-8">{{etudiant.nom}} </div>
+    </div>
+    <div class="row well white">
+        <div class="col-sm-4">Adresse: </div>
+        <div class="col-sm-8">{{etudiant.adresse}} </div>
+    </div>
+
+    <div class="row well white">
+          <div class="col-sm-4">Telephone: </div>
+          <div class="col-sm-8">{{etudiant.telephone}} </div>
+    </div>
+
+    <div class="row well white">
+            <div class="col-sm-4">Email: </div>
+            <div class="col-sm-8">{{etudiant.email}} </div>
+    </div>
+  </div>

@@ -1,0 +1,59 @@
+<div  align="center">
+    <h2><img routerLink="/" class="retour" src="./assets/images/left-arrow.svg"><span>AJOUTER UN ETUDIANT</span></h2>
+  
+  </div>
+    <form class="offset-sm-3 col-sm-6" [formGroup]="form" (ngSubmit)="create(form)">
+
+        <div class="form-group">
+            <div class="col-sm-12">
+              <label for="nom">Nom</label>
+            </div>
+            <div class="col-sm-12">
+              <input formControlName="nom" id="nom" class="form-control">
+            </div>
+          </div>
+        
+    <div class="form-group">
+      <div class="col-sm-12">
+        <label for="prenom">Prenom</label>
+      </div>
+      <div class="col-sm-12">
+        <input formControlName="prenom" id="prenom" class="form-control">
+      </div>
+    </div>
+  
+   
+    <div class="form-group">
+        <div class="col-sm-12">
+          <label for="adresse">Adresse</label>
+        </div>
+        <div class="col-sm-12">
+          <input formControlName="adresse" id="adresse" class="form-control">
+        </div>
+      </div>
+    
+      <div class="form-group">
+        <div class="col-sm-12">
+          <label for="telephone">Telephone</label>
+        </div>
+        <div class="col-sm-12">
+          <input formControlName="telephone" id="telephone" class="form-control">
+        </div>
+      </div>
+
+      <div class="form-group">
+          <div class="col-sm-12">
+            <label for="email">Email</label>
+          </div>
+          <div class="col-sm-12">
+            <input formControlName="email" id="email" class="form-control">
+          </div>
+        </div>
+      
+    <div class="form-group">
+      <div class="col-sm-12">
+        <input type="submit" class="form-control btn vert" value="Ajouter un etudiant">
+      </div>
+    </div>
+  
+  </form>
